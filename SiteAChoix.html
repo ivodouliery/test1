@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    body{
+        background-color: #2ecc71;
+        color: white;
+    }
+    h1{
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1000;
+        text-align: center;
+    }
+</style> language="C"
+<body>
+    <script language="C" type="text/C">
+        #include <stdio.h>
+            #include <assert.h>
+            
+            void echange(int *a, int *b);
+            double produit(double a, double b);
+        
+            double produit(double a, double b)
+            {
+                return a*b;
+            }
+            
+            int main()
+            {
+                int choix = 0;
+                printf("\n 1-produit\n 2-echange\n\n Choisissez la fonction à utiliser : ");
+                scanf("%d",&choix);
+                if(choix==1)
+                {
+                    assert(produit(4.6,6.785)==31.211);
+                    double x=0, y=0;
+                    printf("entrer un chiffre : ");
+                    scanf("%lf",&x);
+                    printf("entrer un deuxième chiffre : ");
+                    scanf("%lf",&y);
+                    printf("le produit est : %lf\n",produit(x,y));
+                }
+                else if (choix==2)
+                {
+                     int a=0, b=0;
+                    printf("a = ");
+                    scanf("%d",&a);
+                    printf("b = ");
+                    scanf("%d",&b);
+                    echange(&a,&b);
+                    printf("Après échange : \na = %d\nb = %d\n",a,b);
+                }
+                else
+                {
+                    printf("\n !!!!! Veuillez choisir un numéro valide !!!!!\n");
+                    main();        
+                }
+                
+            }
+            
+            void echange(int *a, int *b)
+            {
+                int c=*b;
+                *b=*a;
+                *a=c;
+            }
+    </script>
+    <h1>Bonjour les amiis pour qui me connaissent pas vos grand mere les koala qui mange des giroud !!! </h1>
+</body>
+</html>
